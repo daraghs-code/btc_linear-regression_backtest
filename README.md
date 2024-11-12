@@ -6,3 +6,4 @@ Exit either on the close of the candle or if the stop loss is reached.
 Parameters are various popular trading indicators.
 Rolling train periods used so the model can adapt to recent market conditions.
 Rolling distributions collected to decide on where to place stop loss (however a fixed stop of -3% was the final decision).
+Risk free rate of 0% in Sharpe.
