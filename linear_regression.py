@@ -34,7 +34,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import accuracy_score, classification_report
 import quantstats as qs
 
-df = pd.read_csv('BTC-1d-520wks-data.csv') # read in data
+df = pd.read_csv('1BTC-1d-520wks-data.csv') # read in data
 
 # creating results value
 df['result'] = df['close']
