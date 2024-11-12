@@ -7,3 +7,5 @@ Parameters are various popular trading indicators.
 Rolling train periods used so the model can adapt to recent market conditions.
 Rolling distributions collected to decide on where to place stop loss (however a fixed stop of -3% was the final decision).
 Risk free rate of 0% in Sharpe.
+
+Further work: extract prediction distribution, only take trade if a certain amount of the distribution is above\below todays close price. this may increase the accuracy.
