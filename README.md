@@ -9,4 +9,4 @@ Rolling distributions collected to decide on where to place stop loss (however a
 Risk free rate of 0% in Sharpe.
 Am apprehensive about cumulative return, live conditions (slippage etc.) can diminish this.
 
-Further work: extract prediction distribution, only take trade if a certain amount of the distribution is above\below todays close price. this may increase the accuracy.
+Further work: extract prediction distribution, only take trade if a certain amount of the distribution is above\below todays close price. This may increase the accuracy.
