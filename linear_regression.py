@@ -1265,24 +1265,41 @@ to a hard fixed stop loss of 3% which increased performance and reduced the draw
 """
 
 """
+the next step is to include commissions - i wanted this to be a seperate result
+because every exchange has thier own pricing structure so it depends on the individual and
+who they have an account with. i will be using phemex. phemex charge different fees dependent
+on contract, market maker/taker and spot but the most expensive is 0.1%. i will use this as it is 
+absolute worst case scenario (even though the live model will likely be on contracts).
+"""
+
+qs.reports.metrics(pnl150_withsl['volatility'].iloc[30:])
+qs.reports.metrics(pnl365_withsl['volatility'].iloc[30:])
+qs.reports.metrics(pnl720_withsl['volatility'].iloc[30:])
+
+pnl150_withslandcom = pnl150_withsl['volatility'] - 0.001
+pnl365_withslandcom = pnl365_withsl['volatility'] - 0.001
+pnl720_withslandcom = pnl720_withsl['volatility'] - 0.001
+
+qs.reports.metrics(pnl150_withslandcom.iloc[30:])
+qs.reports.metrics(pnl365_withslandcom.iloc[30:])
+qs.reports.metrics(pnl720_withslandcom.iloc[30:])
+
+"""
 -- chosen model --
 
 firstly, the results of all models are extremely high and of course this will be taken
-with apprehension. note that slippage and commission were not included in the backtest,
-this is because they will vary depending on order type and i will prefer to explore thier 
-effects when testing live
+with apprehension.
 
 the results of the backtests using a stop loss of 3% outperform the backtests where no
 stop loss was used.
 
-the chosen model uses a train window of 365 days with stop losses of 3%
+the chosen model uses a train window of 720 days with stop losses of 3%
 
-this was chosen as it has the lowest drawdown period (128 days) relative to a contending 
-sharpe ratio (2.78) and cumulative return (169,791,113.08%)
+this was chosen as it has the lowest drawdown period (164 days) relative to a contending 
+sharpe ratio (2.51) and cumulative return (6,760,935.38%)
 
-the backtest ran from 29\09\2016 to 01\11\2024
+the backtest ran from 19\09\2017 to 01\11\2024
 """
-
 
 
 
