@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Nov  3 21:37:09 2024
 
-@author: dobme
-"""
 """
 the initial ideas came from reading this paper:
 https://www.researchgate.net/publication/382638380_A_Comprehensive_Analysis_of_Machine_Learning_Models_for_Algorithmic_Trading_of_Bitcoin
